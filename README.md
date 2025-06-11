@@ -1,9 +1,10 @@
 ## PROMETHEUS SETUP GUIDE ON KUBERNETES
-This guide walk through the installation of the prometheus instance on a Kubernetes cluster based on this repository. However, to be able to follow through, you need to have the below installed on your machine.
-- A Kubernetes Cluster
-  - You can install a Minikube or a Cloud based Kubernetes cluster.
-- Helm
+This guide walk through the installation of the `prometheus` instance on a Kubernetes cluster based on this repository. However, to be able to follow through, you need to have the below installed on your machine.
+- `A Kubernetes Cluster`
+  - You can install a `Minikube` or any Cloud based Kubernetes cluster.
+- `Helm`
   - Considering Prometheus have official chart, we will leverage helm to install Prometheus on Kubernetes.
+  - To install helm: https://helm.sh/docs/intro/install/
 
 ### STEP 1
 - Clone the repository by running the below on your terminal.
@@ -36,7 +37,7 @@ helm install prometheus .
 ```
 kubectl get pods
 ```
-- You will see the pods are starting, ensure they are all running and in ready state before we can check the Prometheus UI.
+- You will see the pods are starting, ensure they are all running and in ready state before we can check the `Prometheus UI`.
 
 ### STEP 4
 - If all is in running and ready state, run the below command to list all the service created as part of the Prometheus installation.
@@ -47,7 +48,7 @@ kubectl get svc
 ```
 kubectl port-forward service/prometheus-server 8000:80
 ```
-- After running it, you should see something like this `Forwarding from 127.0.0.1:8000` on your terminal, copy it and paste in your browser and you shuld have a Prometheus UI.
+- After running it, you should see something like this `Forwarding from 127.0.0.1:8000` on your terminal, copy it and paste in your browser and you shuld have a `Prometheus UI`.
 
 ###
 Prometheus Helm Chart Reference: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus
