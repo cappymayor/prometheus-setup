@@ -51,5 +51,7 @@ kubectl port-forward service/prometheus-server 8000:80
 - After running it, you should see something like this `Forwarding from 127.0.0.1:8000` on your terminal, copy it and paste in your browser and you shuld have a `Prometheus UI`.
 
 ###
-Prometheus Helm Chart Reference: https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus
+Prometheus Helm Chart Reference: 
+- https://github.com/prometheus-community/helm-charts/tree/main/charts/prometheus
+- https://artifacthub.io/packages/helm/prometheus-community/prometheus
 
